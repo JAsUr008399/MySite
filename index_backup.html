@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JASUR // DIGITAL WORLD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="loader">
+    <div class="loader-text">INITIALIZING...</div>
+</div>
+
+<header>
+    <div class="logo">JASUR<span>.</span></div>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <button class="login-btn" onclick="openLogin()">Войти</button>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+    <div class="grid"></div>
+
+    <div class="hero-content">
+        <div class="status">
+            <span></span> SYSTEM ONLINE
+        </div>
+
+        <p class="subtitle">WELCOME TO MY DIGITAL WORLD</p>
+
+        <h1>
+            CREATE.<br>
+            <span>CODE.</span><br>
+            DOMINATE.
+        </h1>
+
+        <p class="description">
+            Современный цифровой проект с неоновым интерфейсом,
+            анимациями и интерактивными элементами.
+        </p>
+
+        <div class="buttons">
+            <button class="primary" onclick="scrollToProjects()">
+                Смотреть проекты →
+            </button>
+
+            <button class="secondary" onclick="showMessage()">
+                Запустить систему
+            </button>
+        </div>
+    </div>
+
+    <div class="orb"></div>
+</section>
+
+
+<section id="about" class="section">
+    <p class="section-label">// ABOUT</p>
+    <h2>Создавай без <span>ограничений</span></h2>
+
+    <div class="about-grid">
+
+        <div class="glass-card">
+            <div class="icon">⚡</div>
+            <h3>Скорость</h3>
+            <p>
+                Быстрый и лёгкий интерфейс,
+                созданный с использованием HTML, CSS и JavaScript.
+            </p>
+        </div>
+
+        <div class="glass-card">
+            <div class="icon">◈</div>
+            <h3>Дизайн</h3>
+            <p>
+                Тёмная тема, неоновые элементы,
+                стеклянные карточки и плавные анимации.
+            </p>
+        </div>
+
+        <div class="glass-card">
+            <div class="icon">⌘</div>
+            <h3>Код</h3>
+            <p>
+                Чистая структура проекта,
+                которую можно расширять новыми функциями.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="projects" class="section projects">
+    <p class="section-label">// PROJECTS</p>
+    <h2>Мои <span>проекты</span></h2>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <div class="project-number">01</div>
+            <h3>WEB SYSTEM</h3>
+            <p>Современный интерактивный веб-сайт.</p>
+            <button onclick="projectMessage('WEB SYSTEM')">Открыть</button>
+        </div>
+
+        <div class="project-card">
+            <div class="project-number">02</div>
+            <h3>AI LAB</h3>
+            <p>Эксперименты с искусственным интеллектом.</p>
+            <button onclick="projectMessage('AI LAB')">Открыть</button>
+        </div>
+
+        <div class="project-card">
+            <div class="project-number">03</div>
+            <h3>CODEX</h3>
+            <p>Рабочее пространство для программирования.</p>
+            <button onclick="projectMessage('CODEX')">Открыть</button>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="contact" class="section contact">
+    <p class="section-label">// CONTACT</p>
+    <h2>Готовы <span>создавать?</span></h2>
+
+    <p>
+        Этот сайт можно превратить в полноценный проект:
+        с сервером, базой данных и настоящей авторизацией.
+    </p>
+
+    <button class="primary" onclick="openLogin()">
+        Войти в систему
+    </button>
+</section>
+
+</main>
+
+
+<div id="loginModal" class="modal">
+    <div class="modal-box">
+
+        <button class="close" onclick="closeLogin()">×</button>
+[03.10.2026 3:36] Jasur: <div class="modal-icon">◉</div>
+
+        <h2>ACCESS</h2>
+        <p>Введите данные для демонстрационного входа.</p>
+
+        <input id="username" type="text" placeholder="Username">
+        <input id="password" type="password" placeholder="Password">
+
+        <button class="primary full" onclick="login()">
+            LOGIN
+        </button>
+
+        <div id="loginResult"></div>
+
+    </div>
+</div>
+
+
+<div id="notification"></div>
+
+<footer>
+    <div>JASUR<span>.</span></div>
+    <div>© 2026 DIGITAL SYSTEM</div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
